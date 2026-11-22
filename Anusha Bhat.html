@@ -1,0 +1,459 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Anusha Bhat</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/* Layout: script-page rhythm. Slug-line labels in typewriter mono, one big display name, content in a call-sheet grid. */
+:root {
+  --bg: #eceef5;
+  --surface: #f8f9fc;
+  --fg: #181a2c;
+  --muted: #5b5f78;
+  --line: #cfd2e0;
+  --accent: #2f3fe6;
+  --on-accent: #ffffff;
+  --accent-soft: #dfe2fb;
+  --font-display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Courier Prime", "Courier New", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11121c; --surface: #191b29; --fg: #eceef8; --muted: #9a9eb8; --line: #2c2f45;
+    --accent: #8f9bff; --on-accent: #11121c; --accent-soft: #232748; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11121c; --surface: #191b29; --fg: #eceef8; --muted: #9a9eb8; --line: #2c2f45;
+  --accent: #8f9bff; --on-accent: #11121c; --accent-soft: #232748; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1040px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+section { padding-block: 56px 8px; }
+.slug { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; display: flex; gap: 12px; align-items: center; }
+.slug::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+h1, h2, h3, h4 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.08; }
+h2 { font-size: clamp(28px, 4.5vw, 40px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; }
+h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+p { margin: 0; }
+.lede { max-width: 62ch; color: var(--muted); font-size: 18px; }
+
+/* hero */
+.hero { padding-top: 48px; padding-bottom: 8px; }
+.hero h1 { font-size: clamp(54px, 13vw, 132px); font-weight: 700; letter-spacing: -0.045em; line-height: 0.92; margin-bottom: 26px; }
+.hero h1 span { color: var(--accent); }
+.hero .statement { font-family: var(--font-display); font-size: clamp(21px, 3vw, 30px); line-height: 1.25; max-width: 30ch; margin-bottom: 28px; font-weight: 500; letter-spacing: -0.01em; text-wrap: balance; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 600; font-size: 16px; text-decoration: none; border: 1.5px solid var(--fg); background: transparent; color: var(--fg); cursor: pointer; font-family: inherit; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn:hover { transform: translateY(-1px); }
+.mail { font-family: var(--font-mono); font-size: 15px; word-break: break-all; }
+
+/* pipeline */
+.pipeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin-top: 44px; border: 1.5px solid var(--fg); border-radius: 14px; overflow: hidden; background: var(--surface); }
+.pipeline div { padding: 18px 20px; border-right: 1px solid var(--line); min-width: 0; }
+.pipeline div:last-child { border-right: 0; }
+.pipeline .k { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 6px; }
+.pipeline .v { font-size: 15px; line-height: 1.4; }
+@media (max-width: 720px) { .pipeline { grid-template-columns: 1fr 1fr; } .pipeline div:nth-child(2) { border-right: 0; } .pipeline div:nth-child(-n+2) { border-bottom: 1px solid var(--line); } }
+
+/* proof numbers */
+.proof { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; min-width: 0; }
+.stat .n { font-family: var(--font-display); font-size: clamp(34px, 5vw, 44px); font-weight: 700; letter-spacing: -0.03em; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+.stat .l { font-size: 15px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+.journey { grid-column: 1 / -1; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px 36px; align-items: center; background: var(--fg); color: var(--bg); border-radius: 14px; padding: 26px 28px; }
+.journey .big { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.035em; line-height: 1; font-size: clamp(38px, 6.5vw, 68px); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.journey .big span { opacity: 0.55; }
+.journey .big em { font-style: normal; color: var(--accent-soft); }
+.journey .cap { margin-top: 10px; font-size: 16px; opacity: 0.85; }
+.track { position: relative; height: 10px; border-radius: 999px; background: color-mix(in srgb, var(--bg) 22%, transparent); }
+.track i { position: absolute; left: 0; top: 0; bottom: 0; width: 29%; border-radius: 999px; background: color-mix(in srgb, var(--bg) 55%, transparent); }
+.track b { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; border-radius: 999px; background: linear-gradient(90deg, transparent 29%, var(--accent-soft) 29%); }
+.marks { display: flex; justify-content: space-between; gap: 12px; margin-top: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
+.marks .mult { color: var(--accent-soft); opacity: 1; }
+@media (max-width: 820px) { .proof { grid-template-columns: 1fr; } .journey { grid-template-columns: 1fr; padding: 22px; } }
+
+/* more work */
+.more { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 36px; padding: 18px 22px; border: 1.5px solid var(--fg); border-radius: 14px; text-decoration: none; background: var(--surface); }
+.more:hover { background: var(--accent-soft); }
+.more-k { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.more-v { font-family: var(--font-display); font-size: 22px; font-weight: 700; }
+
+/* platforms */
+.platforms { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
+.plat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.plat p { color: var(--muted); font-size: 16px; }
+.plat ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.plat li a { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line); text-decoration: none; font-size: 15px; font-weight: 500; }
+.plat li a:hover { color: var(--accent); }
+.plat li a span:last-child { color: var(--muted); font-family: var(--font-mono); flex: none; }
+
+.formats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.formats span { font-family: var(--font-mono); font-size: 14px; border: 1.5px solid var(--fg); border-radius: 999px; padding: 6px 14px; }
+
+/* before wishlink */
+.before { margin-top: 44px; }
+.before-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px 32px; }
+.before-grid h3 { margin-bottom: 6px; }
+.before-grid p { font-size: 16px; color: var(--muted); }
+.before-grid h4 { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 400; margin: 14px 0 4px; }
+.before-grid .brandlist { color: var(--fg); }
+
+/* work */
+.group { margin-top: 36px; }
+.group:first-of-type { margin-top: 8px; }
+.group-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; letter-spacing: -0.015em; margin-bottom: 14px; display: flex; align-items: baseline; gap: 10px; }
+.group-title small { font-family: var(--font-mono); font-size: 12px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.work { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.tag { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.card p { color: var(--muted); font-size: 16px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: auto; padding-top: 6px; }
+.links a { font-weight: 600; font-size: 15px; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--accent); }
+.links a:hover { color: var(--accent); }
+
+/* experience */
+.exp { display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 28px; padding-block: 22px; border-top: 1px solid var(--line); }
+.row:last-child { border-bottom: 1px solid var(--line); }
+.row .who { font-family: var(--font-display); font-size: 20px; font-weight: 700; line-height: 1.2; }
+.row .when { font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin-top: 4px; letter-spacing: 0.04em; }
+.row ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+.row li { font-size: 16px; }
+.row li::marker { color: var(--accent); }
+.row .role { font-weight: 600; margin-bottom: 8px; }
+@media (max-width: 680px) { .row { grid-template-columns: 1fr; } }
+
+.brands { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px 28px; }
+.brands h3 { font-size: 15px; font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 400; margin-bottom: 6px; }
+.brands p { font-size: 16px; }
+
+/* contact */
+.contact { margin-top: 56px; padding-block: 48px; background: var(--fg); color: var(--bg); }
+.contact h2 { color: var(--bg); }
+.contact .slug { color: var(--bg); opacity: 0.7; }
+.contact .slug::after { background: var(--bg); opacity: 0.25; }
+.contact .btn { border-color: var(--bg); color: var(--bg); }
+.contact .btn.primary { background: var(--bg); color: var(--fg); border-color: var(--bg); }
+.contact p { max-width: 56ch; opacity: 0.85; margin-bottom: 22px; }
+.contact .edu { margin-top: 28px; font-size: 15px; opacity: 0.7; display: flex; flex-direction: column; gap: 4px; }
+.contact .edu span { display: block; }
+@media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
+</style>
+
+<header class="wrap hero">
+  <p class="slug">Content &amp; brand strategist &middot; Gurgaon, India</p>
+  <h1>Anusha <span>Bhat</span></h1>
+  <p class="statement">Six years of running the full cycle: idea to script to final cut, across platforms and formats.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="#work">See the work</a>
+  </div>
+
+  <div class="pipeline" aria-label="How a piece of content moves">
+    <div><span class="k">Strategy</span><span class="v">Audience insight, positioning and the central idea behind the brief</span></div>
+    <div><span class="k">Writing</span><span class="v">Scripts, storyboards and copy written in a consistent brand voice</span></div>
+    <div><span class="k">Collaboration</span><span class="v">Working with design and editing teams on visuals, cuts and revisions</span></div>
+    <div><span class="k">Delivery</span><span class="v">Final output published across Instagram, LinkedIn and YouTube</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="coverage">
+    <p class="slug">What I cover</p>
+    <h2>Three platforms, every format, one brand voice.</h2>
+    <p class="lede">Short-form and long-form, brand building and paid, planned as one system on Instagram, LinkedIn and YouTube.</p>
+    <div class="platforms" style="margin-top:28px">
+      <article class="plat">
+        <h3>Instagram</h3>
+        <p>Original IPs, launch campaigns, product features, festive and topical content, short videos and static.</p>
+        <ul>
+          <li><a href="https://www.behance.net/gallery/258742535/Creator-On-Line-101" target="_blank" rel="noopener"><span>Creator On-Line 101</span><span>&#8599;</span></a></li>
+          <li><a href="https://www.behance.net/gallery/235636863/The-Viral-Breakdown-Season-2" target="_blank" rel="noopener"><span>The Viral Breakdown</span><span>&#8599;</span></a></li>
+          <li><a href="https://www.behance.net/gallery/240189403/Product-Feature-Wishlink-Engage-on-Stories" target="_blank" rel="noopener"><span>Wishlink Engage on Stories</span><span>&#8599;</span></a></li>
+        </ul>
+      </article>
+      <article class="plat">
+        <h3>LinkedIn</h3>
+        <p>Brand building, founder and org branding, and new IPs.</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/posts/shop-wishlink_%F0%9D%90%80-%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A6%F0%9D%90%9A%F0%9D%90%AB%F0%9D%90%A4-%F0%9D%90%A6%F0%9D%90%A8%F0%9D%90%A6%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%AD-%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB-%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A2%F0%9D%90%9A-activity-7406236543595606016-nKG2" target="_blank" rel="noopener"><span>Wishlink x Meta event</span><span>&#8599;</span></a></li>
+          <li><a href="https://www.linkedin.com/posts/shop-wishlink_a-big-milestone-for-wishlink-and-an-even-activity-7431984793183010816-WOS6" target="_blank" rel="noopener"><span>Founder and org branding</span><span>&#8599;</span></a></li>
+          <li><a href="https://lnkd.in/p/gRaA_yeG" target="_blank" rel="noopener"><span>Trending Now, monthly wrap-up</span><span>&#8599;</span></a></li>
+        </ul>
+      </article>
+      <article class="plat">
+        <h3>YouTube</h3>
+        <p>Long and short format videos, brand documentaries and product tutorials.</p>
+        <ul>
+          <li><a href="https://youtu.be/IchQLaLwJYo" target="_blank" rel="noopener"><span>Crossposting tutorial</span><span>&#8599;</span></a></li>
+          <li><a href="https://www.youtube.com/watch?v=yPEVNFSf4zg" target="_blank" rel="noopener"><span>Engage on Stories tutorial</span><span>&#8599;</span></a></li>
+          <li><a href="https://youtu.be/gF1lG-7QIQY" target="_blank" rel="noopener"><span>Wrapping up 2025 content mistakes</span><span>&#8599;</span></a></li>
+        </ul>
+      </article>
+    </div>
+    <div class="formats" aria-label="Formats">
+      <span>Short-form video</span><span>Long-form video</span><span>Brand documentaries</span><span>Original IPs</span><span>Static posts</span><span>Paid ads</span><span>Product tutorials</span><span>360&deg; campaigns</span>
+    </div>
+
+    <div class="before">
+      <p class="slug">Before Wishlink</p>
+      <div class="before-grid">
+        <div>
+          <h3>Mirchi</h3>
+          <p>360-degree content solutions across on-air, digital and on-ground.</p>
+          <h4>Brands worked with</h4>
+          <p class="brandlist">Pantaloons, Greenply, Go Ibibo, Berger Paints</p>
+        </div>
+        <div>
+          <h3>Momspresso</h3>
+          <p>End-to-end branded content, from ideation to final production.</p>
+          <h4>Brands worked with</h4>
+          <p class="brandlist">Johnson &amp; Johnson, Aveeno Baby, Godrej, ITC, Abbott, Sanofi, Sebamed, PregaNews, Canara-HSBC</p>
+        </div>
+        <div>
+          <h3>Pocket FM</h3>
+          <p>Scripts and show concepts for US and global audio shows, with a team of three writers and two video editors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <p class="slug">Impact &middot; Wishlink</p>
+    <div class="proof">
+      <div class="journey">
+        <div>
+          <div class="big">70k <span>&rarr;</span> <em>240k</em></div>
+          <p class="cap">connect.wishlink, grown 3.4x.</p>
+        </div>
+        <div>
+          <div class="track" role="img" aria-label="Followers grew from 70 thousand to 240 thousand"><i></i><b></b></div>
+          <div class="marks"><span>Then</span><span class="mult">+170k followers</span><span>Now</span></div>
+        </div>
+      </div>
+      <div class="stat"><div class="n">40%</div><div class="l">increase in brand engagement across Instagram, LinkedIn and YouTube</div></div>
+      <div class="stat"><div class="n">25%</div><div class="l">rise in reach and impressions across 5+ go-to-market campaigns</div></div>
+      <div class="stat"><div class="n">20%</div><div class="l">improvement in brand recall from original IPs and flagship documentaries</div></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <p class="slug">Selected work</p>
+    <h2>Documentaries, launches, brand stories and the content around them.</h2>
+
+    <div class="group">
+      <h3 class="group-title">Documentaries &amp; IPs</h3>
+      <div class="work">
+        <article class="card">
+          <span class="tag">Brand documentary</span>
+          <h3>The Wishlink Story</h3>
+          <p>How Wishlink went from a single idea to leading India's creator economy, told in its flagship documentary.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/226136633/The-Wishlink-Story" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+        <article class="card">
+          <span class="tag">Original IP &middot; micro-drama</span>
+          <h3>Creator On-Line 101</h3>
+          <p>A five-episode micro-drama on the chaos of creator life. Every episode brings a new creator, a new crisis and the same voice on speed dial: Wishlink.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/258742535/Creator-On-Line-101" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+        <article class="card">
+          <span class="tag">Brand documentary</span>
+          <h3>Frame By Frame</h3>
+          <p>A film on creator life, seen through Tarini Shah, Simran Balar Jain and Karan Gangwani. Three creators, one wider reflection on creating for a living.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/249560747/Frame-By-Frame-ft-Tarini-Shah-Simran-Balar-Jain" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+        <article class="card">
+          <span class="tag">Original IP &middot; series</span>
+          <h3>The Viral Breakdown</h3>
+          <p>A brand manager and a creator unpack why some reels go viral and others don't, so more creators can learn.</p>
+          <div class="links">
+            <a href="https://www.behance.net/gallery/235636863/The-Viral-Breakdown-Season-2" target="_blank" rel="noopener">The series &#8599;</a>
+            <a href="https://www.behance.net/gallery/226316103/The-Viral-Breakdown-Teaser" target="_blank" rel="noopener">Teaser &#8599;</a>
+            <a href="https://www.behance.net/gallery/226691553/TVB-Pre-Buzz" target="_blank" rel="noopener">Pre-buzz &#8599;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-title">Launches</h3>
+      <div class="work">
+        <article class="card">
+          <span class="tag">Festive campaign &middot; Mirchi</span>
+          <h3>Pantaloons Non Stop Celebrations</h3>
+          <p>A festive campaign by Mirchi to bring shoppers into Pantaloons stores, led by Mirchi RJs and creators.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/173740179/Pantaloons-NonStopCelebrations" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+        <article class="card">
+          <span class="tag">Brand launch &middot; Wishlink</span>
+          <h3>Wishlink x Zepto</h3>
+          <p>When Zepto joined Wishlink, we skipped the press-release tone and told creators, a little offbeat, that commissions would now come faster.</p>
+          <div class="links">
+            <a href="https://www.behance.net/gallery/226299301/Zepto-x-Wishlink-Pre-buzz-1" target="_blank" rel="noopener">Pre-buzz &#8599;</a>
+            <a href="https://www.behance.net/gallery/226300211/Zepto-x-Wishlink-Launch" target="_blank" rel="noopener">Launch &#8599;</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="tag">Product feature &middot; Wishlink</span>
+          <h3>Engage on Stories</h3>
+          <p>A Creator App feature update, told in a way that doesn't read like a feature update.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/240189403/Product-Feature-Wishlink-Engage-on-Stories" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-title">Brand storytelling</h3>
+      <div class="work">
+        <article class="card">
+          <span class="tag">Johnson's Baby &middot; Momspresso</span>
+          <h3>The Gentlest Touch</h3>
+          <p>When Johnson &amp; Johnson wanted people to remember its original products, we told a story about love.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/156962391/Johnsons-Baby-The-Gentlest-Touch" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+        <article class="card">
+          <span class="tag">Gritzo &middot; Momspresso</span>
+          <h3>Gritzo Supermilk: The Sibling Story</h3>
+          <p>Why siblings need different supplements for their age, gender and needs, told by two sisters who love (and fight) a lot.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/156962119/Gritzo-Supermilk-The-sibling-story" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-title">Static posts</h3>
+      <div class="work">
+        <article class="card">
+          <span class="tag">Topical</span>
+          <h3>Women's Day</h3>
+          <p>A Women's Day note of love to Wishlink's star women creators.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/226298301/Womens-Day" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+        <article class="card">
+          <span class="tag">Product</span>
+          <h3>Wishlink Shop</h3>
+          <p>The case for why Wishlink Shop is the one feature every creator should have.</p>
+          <div class="links"><a href="https://www.behance.net/gallery/226295901/Wishlink-Shop" target="_blank" rel="noopener">Behance project &#8599;</a></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-title">Paid ads</h3>
+      <div class="work">
+        <article class="card">
+          <span class="tag">Performance creatives</span>
+          <h3>Performance creatives</h3>
+          <p>Paid ad creatives that ran alongside organic content at Wishlink.</p>
+          <div class="links"><a href="https://drive.google.com/drive/folders/17MaJGDCGvxviHvF0kIX5jMQu052XJN7i?usp=sharing" target="_blank" rel="noopener">Open the folder &#8599;</a></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="group">
+      <h3 class="group-title">YT videos</h3>
+      <div class="work">
+        <article class="card">
+          <span class="tag">Product tutorial</span>
+          <h3>Wishlink Engage on Stories</h3>
+          <p>A quick walkthrough of Engage on Stories in the Wishlink Creator App.</p>
+          <div class="links"><a href="https://www.youtube.com/watch?v=yPEVNFSf4zg" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+        </article>
+        <article class="card">
+          <span class="tag">Creator community</span>
+          <h3>Wrapping up 2025 content mistakes</h3>
+          <p>A year-end wrap-up of 2025's content mistakes, so creators can leave them behind in 2026.</p>
+          <div class="links"><a href="https://youtu.be/gF1lG-7QIQY" target="_blank" rel="noopener">Watch on YouTube &#8599;</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <p class="slug">Experience</p>
+    <h2>From brand films to audio shows to a content strategy team.</h2>
+    <div class="exp">
+      <div class="row">
+        <div><div class="who">Wishlink</div><div class="when">Current role</div></div>
+        <div>
+          <p class="role">Senior Content Strategist</p>
+          <ul>
+            <li>Led content planning across Instagram, LinkedIn and YouTube with targeted strategies.</li>
+            <li>Built editorial plans and social calendars for more than five go-to-market campaigns and daily BAU.</li>
+            <li>Conceptualised three original content IPs and two flagship brand documentaries.</li>
+            <li>Delivered one voice across organic content and performance ads.</li>
+            <li>Worked with pan-India and regional creators across genres.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div><div class="who">Pocket FM</div><div class="when">From Sep 2023</div></div>
+        <div>
+          <p class="role">Concept Developer, then Chief Writer &amp; Editor</p>
+          <ul>
+            <li>Developed show concepts for the US market and tested audio and video branding.</li>
+            <li>Wrote and edited scripts for major US-based and global audio shows.</li>
+            <li>Managed three writers and two video editors, owning content quality end to end.</li>
+            <li>Key shows: Cupid's Curse, Rekindled Heartache.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div><div class="who">Mirchi</div></div>
+        <div>
+          <p class="role">Creative Solutions Conceptualiser</p>
+          <ul>
+            <li>Conceptualised and owned 360-degree content solutions for brands, across on-air, digital and on-ground.</li>
+            <li>Part of the Mirchi Brewery team behind campaigns for Pantaloons, Greenply, Go Ibibo and Berger Paints.</li>
+            <li>Worked with regional creators alongside Mirchi RJs.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div><div class="who">Momspresso</div></div>
+        <div>
+          <p class="role">Branded Content Producer</p>
+          <ul>
+            <li>Produced branded content end to end, from the first idea through storyboarding, scripting and pre-production to the final cut.</li>
+            <li>Delivered for big names including Johnson &amp; Johnson, Aveeno Baby, Godrej, ITC, Abbott, Sanofi and Sebamed.</li>
+            <li>Worked with mom creators across the Momspresso community.</li>
+            <li>Ran the backend for Facebook Live, YouTube Live and multicasts on Streamyard.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a class="more" href="https://www.behance.net/anushabhat" target="_blank" rel="noopener"><span class="more-k">More work on</span><span class="more-v">Behance &#8599;</span></a>
+  </section>
+
+  <section id="brands">
+    <p class="slug">Brands I have worked with</p>
+    <div class="brands">
+      <div><h3>Digital &amp; travel</h3><p>Wishlink, Zepto, Meta, Go Ibibo</p></div>
+      <div><h3>Retail &amp; home</h3><p>Pantaloons, Greenply, Berger Paints, Godrej</p></div>
+      <div><h3>Health &amp; baby care</h3><p>Johnson's Baby, Aveeno Baby, Abbott, Sebamed, Sanofi, PregaNews, Gritzo</p></div>
+      <div><h3>Corporate &amp; finance</h3><p>ITC, Canara-HSBC, PNB</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <p class="slug">Let's talk</p>
+    <h2>Looking for someone to own the content, end to end?</h2>
+    <p>I'm open to conversations about content, brand storytelling and the teams that build them.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:bhat.anusha04@gmail.com">bhat.anusha04@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/anushabhat4" target="_blank" rel="noopener">LinkedIn &#8599;</a>
+    </div>
+    <div class="edu">
+      <span>Master's in Mass Communication, AJK MCRC, Jamia Millia Islamia</span>
+      <span>Bachelor's in English Literature, Delhi University</span>
+    </div>
+  </div>
+</footer>
+
+</body></html>
